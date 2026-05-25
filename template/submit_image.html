@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Musical Instruments Recognition</title>
+    </head>
+
+    <body style="display:flex; flex-direction:column; align-items:center;">
+        <div class="content">
+            <div class="main-container">
+                <div class="row">
+                    <div class="col">
+
+                        <h1>Musical Instruments Recognition</h1>
+                        <h3>Currently limited to Drum, Guitar, Violin, Saxophone, and Piano.</h3>
+                            <hr>
+
+                        <form action="http://localhost:9000/predict" method="POST" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label>Select image</label>
+                                    </td> 
+                                    <td> <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="imagefile" id="imagefile" accept="image/*">                
+                                            </div> </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td> <button type="submit" class="btn-primary">Upload</button></td>
+                                </tr>
+                            </table> 
+                        </form>
+                
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="result-container">
+                <p> Original Image: </p>
+                    <img src="data:image/png;base64,{{ img_data }}" id="img-upload" alt="img_data" class="img-upload"/>
+                <p> <label class="custom-file-label" for="image">Image likely belongs to {{predict_data}} class</label> </p>
+            </div>
+            
+        </div>
+    </body>
+</html>
