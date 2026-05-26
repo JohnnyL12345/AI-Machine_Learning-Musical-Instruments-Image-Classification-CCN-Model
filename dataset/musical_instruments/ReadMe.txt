@@ -1,0 +1,1 @@
+# This file folder is to hold all the Original Training, Validation and Testing data of the all the musical instruments: Violin, Piano, Guitar, Drums and Saxaphone. The sub-folder's content in this folder has to be unzip so that the folder's content is properly read by the program.
